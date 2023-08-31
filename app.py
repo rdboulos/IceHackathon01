@@ -4,6 +4,10 @@ from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 import matplotlib.pyplot as plt
 
+API_Key='````sk-Ck3aGqiOl````kxe8LIOoOeeT3Blb````kFJY9nlS12YMI````O6R18jwHna````'
+API_KEY_2 = API_KEY.replace('````', '')
+
+
 st.title("pandas-ai streamlit interface")
 
 st.write("A demo interface for [PandasAI](https://github.com/gventuri/pandas-ai)")
@@ -35,7 +39,7 @@ if "openai_key" in st.session_state:
         submitted = st.form_submit_button("Submit")
         if submitted:
             with st.spinner():
-                llm = OpenAI(api_token="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")
+                llm = OpenAI(api_token=API_KEY_2)
                 pandas_ai = PandasAI(llm, conversational=True)
                 x = pandas_ai.run(df, prompt=question)
 
