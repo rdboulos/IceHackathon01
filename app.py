@@ -35,7 +35,7 @@ if "openai_key" in st.session_state:
         if submitted:
             with st.spinner():
                 llm = OpenAI(api_token=st.session_state.openai_key)
-                pandas_ai = PandasAI(llm)
+                pandas_ai = PandasAI(llm, conversation=True)
                 x = pandas_ai.run(st.session_state.df, prompt=question)
 
                 fig = plt.gcf()
