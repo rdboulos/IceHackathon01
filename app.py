@@ -49,7 +49,7 @@ if "openai_key" in st.session_state:
                 st.write(x)
                 fig = plt.gcf()
                 if fig.get_axes():
-                    st.pyplot(fig=None, clear_figure=None, use_container_width=True, **kwargs)
+                    st.pyplot(fig)
                 st.write(x)
                 st.session_state.prompt_history.append(question)
 
