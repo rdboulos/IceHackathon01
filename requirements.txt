@@ -1,4 +1,4 @@
-pandasai==0.2.2
+pandasai
 streamlit
 matplotlib
 pandas
