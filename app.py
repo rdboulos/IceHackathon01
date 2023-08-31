@@ -34,7 +34,8 @@ if "openai_key" in st.session_state:
             #data_frames = []
             #data_frames.append(df)
             #combined_df = pd.concat(data_frames, ignore_index=True)
-            st.session_state.df = combined_df
+            #st.session_state.df = combined_df
+            st.session_state.df = df
 
 
     with st.form("Question"):
