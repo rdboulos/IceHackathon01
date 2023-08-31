@@ -30,8 +30,8 @@ if "openai_key" in st.session_state:
             type="csv",
         )
         if uploaded_file is not None:
-            df = pd.read_csv("https://raw.githubusercontent.com/rdboulos/IceHackathon01/main/GOTOES_FIT-CSV_Github.csv", index_col=0)
-            #st.session_state.df = df
+            df = pd.read_csv(uploaded_file)
+            st.session_state.df = df
 
 
     with st.form("Question"):
@@ -41,7 +41,7 @@ if "openai_key" in st.session_state:
             with st.spinner():
                 llm = OpenAI(api_token=API_KEY_2)
                 pandas_ai = PandasAI(llm, conversational=True)
-                x = pandas_ai.run(df, prompt=question)
+                x = pandas_ai.run(st.session_state.df, prompt=question)
 
                 fig = plt.gcf()
                 if fig.get_axes():
