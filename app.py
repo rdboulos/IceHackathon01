@@ -26,7 +26,7 @@ if "openai_key" in st.session_state:
             type="csv",
         )
         if uploaded_file is not None:
-            df = pd.read_csv("https://raw.githubusercontent.com/rdboulos/IceHackathon01/main/GOTOES_FIT-CSV_Github.csv?raw=true", index_col=0)
+            df = pd.read_csv("https://raw.githubusercontent.com/rdboulos/IceHackathon01/main/GOTOES_FIT-CSV_Github.csv", index_col=0)
             #st.session_state.df = df
 
 
