@@ -27,16 +27,16 @@ if "openai_key" in st.session_state:
         )
         if uploaded_file is not None:
             df = pd.read_csv(uploaded_file)
-            st.session_state.df = df
+            #st.session_state.df = df
 
     with st.form("Question"):
         question = st.text_input("Question", value="", type="default")
         submitted = st.form_submit_button("Submit")
         if submitted:
             with st.spinner():
-                llm = OpenAI(api_token=st.session_state.openai_key)
-                pandas_ai = PandasAI(llm, conversation=True)
-                x = pandas_ai.run(st.session_state.df, prompt=question)
+                llm = OpenAI(api_token="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")
+                pandas_ai = PandasAI(llm, conversational=True)
+                x = pandas_ai.run(df, prompt=question)
 
                 fig = plt.gcf()
                 if fig.get_axes():
