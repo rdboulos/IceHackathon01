@@ -35,7 +35,7 @@ if "openai_key" in st.session_state:
             #data_frames.append(df)
             #combined_df = pd.concat(data_frames, ignore_index=True)
             #st.session_state.df = combined_df
-            st.session_state.df = df
+    
 
 
     with st.form("Question"):
@@ -45,7 +45,7 @@ if "openai_key" in st.session_state:
             with st.spinner():
                 llm = OpenAI(api_token=API_KEY_2)
                 pandas_ai = PandasAI(llm, conversational=True)
-                x = pandas_ai.run(st.session_state.df, prompt=question)
+                x = pandas_ai.run(df, prompt=question)
                 st.write(x)
                 fig = plt.gcf()
                 if fig.get_axes():
