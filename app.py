@@ -46,9 +46,9 @@ if "openai_key" in st.session_state:
                 pandas_ai = PandasAI(llm, enable_cache=False)
                 x = pandas_ai.run(st.session_state.df, prompt=question)
                 
-                fig = plt.gcf()
-                if fig.get_axes():
-                    st.pyplot(fig)
+                #fig = plt.gcf()
+                #if fig.get_axes():
+                 #   st.pyplot(fig)
                 st.write(x)
                 st.session_state.prompt_history.append(question)
 
