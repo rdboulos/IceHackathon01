@@ -4,7 +4,7 @@ from pandasai import PandasAI
 from pandasai.llm.openai import OpenAI
 import matplotlib.pyplot as plt
 
-API_KEY='````sk-Ck3aGqiOl````kxe8LIOoOeeT3Blb````kFJY9nlS12YMI````O6R18jwHna````'
+API_KEY='````sk-KUXXmJ4kF````Eblnb1JXwSg````T3BlbkFJw````E8Qbz411kQ2Q````pWww90w````'
 API_KEY_2 = API_KEY.replace('````', '')
 
 
