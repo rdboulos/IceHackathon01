@@ -1,5 +1,5 @@
-pandasai==0.2.2
+pandasai==0.8.4
 streamlit
 matplotlib==3.7.1
-pandas==2.1.0
+pandas==1.5.3
 bs4
