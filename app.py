@@ -8,12 +8,11 @@ API_KEY='````sk-Ck3aGqiOl````kxe8LIOoOeeT3Blb````kFJY9nlS12YMI````O6R18jwHna````
 API_KEY_2 = API_KEY.replace('````', '')
 
 
-st.title("pandas-ai streamlit interface")
+st.title("INC.redible")
 
-st.write("A demo interface for [PandasAI](https://github.com/gventuri/pandas-ai)")
-st.write(
-    "Looking for an example *.csv-file?, check [here](https://gist.github.com/netj/8836201)."
-)
+st.write("Get reliable data in seconds")
+#st.write(
+    #"Looking for an example *.csv-file?, check [here](https://gist.github.com/netj/8836201).")
 
 if "openai_key" not in st.session_state:
     with st.form("API key"):
