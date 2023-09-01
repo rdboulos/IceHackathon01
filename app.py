@@ -32,9 +32,9 @@ if "openai_key" in st.session_state:
             df = pd.read_csv(uploaded_file)
             st.session_state.df = df
             
-            #data_frames = []
-            #data_frames.append(df)
-            #combined_df = pd.concat(data_frames, ignore_index=True)
+            data_frames = []
+            data_frames.append(df)
+            combined_df = pd.concat(data_frames, ignore_index=True)
 
     with st.form("Question"):
         question = st.text_input("Question", value="", type="default")
