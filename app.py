@@ -8,9 +8,9 @@ API_KEY='````sk-KUXXmJ4kF````Eblnb1JXwSg````T3BlbkFJw````E8Qbz411kQ2Q````pWww90w
 API_KEY_2 = API_KEY.replace('````', '')
 
 
-st.title("INC.redible")
+st.title("Matthew Dinham")
 
-st.write("Get reliable data in seconds")
+st.write("2023 UCI Cycling World Championships")
 #st.write(
     #"Looking for an example *.csv-file?, check [here](https://gist.github.com/netj/8836201).")
 
