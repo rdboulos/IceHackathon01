@@ -41,7 +41,7 @@ if "openai_key" in st.session_state:
         submitted = st.form_submit_button("Submit")
         if submitted:
             with st.spinner():
-                llm = OpenAI(api_token=API_KEY_2)
+                llm = OpenAI(api_token=API_KEY_2, temperature=0.2)
                 pandas_ai = PandasAI(llm, conversational=True, enable_cache=False)
                 x = pandas_ai.run(st.session_state.df, prompt=question)
                 
